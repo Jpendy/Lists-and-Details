@@ -3,6 +3,7 @@
 exports[`List component renders List 1`] = `
 <ul>
   <Link
+    key="1"
     to="/undefined"
   >
     <li>
@@ -11,6 +12,7 @@ exports[`List component renders List 1`] = `
     </li>
   </Link>
   <Link
+    key="2"
     to="/undefined"
   >
     <li>
