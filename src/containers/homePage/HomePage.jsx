@@ -4,17 +4,20 @@ import { apiFetch } from '../../services/apiFetch';
 
 const HomePage = () => {
   const [listArray, setListArray] = useState([]);
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
+    setLoading(true);
     apiFetch()
-      .then((listArray) => setListArray(listArray));
+      .then((listArray) => setListArray(listArray))
+      .finally(() => setLoading(false));
   }, []);
 
-  console.log(listArray);
+  if(loading) return <h1>Loading</h1>;
+
   return (
     <>
-    hello
       <List listArray ={listArray} />
     </> 
   );

@@ -1,16 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const List = ({ listArray }) => {
 
   const listElement = listArray.map(item => {
     return (
-      <li key={Math.random()}>
-        {item.name}
-      </li>
+      <Link key={Math.random()} to={`/${item.name}`} >
+        <li key={Math.random()}>
+          <p>{item.name}</p>
+          <img src={item.photoUrl} />
+        </li>
+      </Link>
     );
   });
-
+  
   return (
     <ul>
       { listElement }
