@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const List = listArray => {
+const List = ({ listArray }) => {
 
   const listElement = listArray.map(item => {
     return (
@@ -15,6 +16,10 @@ const List = listArray => {
       { listElement }
     </ul>
   );
+};
+
+List.propTypes = {
+  listArray: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
 };
 
 export default List;

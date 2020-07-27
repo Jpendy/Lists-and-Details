@@ -4,7 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import HomePage from '../homePage/HomePage';
+import HomePage from '../../containers/homePage/HomePage';
 
 
 export default function App() {
