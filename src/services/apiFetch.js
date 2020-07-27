@@ -1,8 +1,9 @@
-export const apiFetch = () => {
-  return fetch('https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=50')
+export const apiFetch = apiUrl => {
+  return fetch(apiUrl)
     .then(res => res.json());
-  // .then(res => ({
-  //   name: res.name,
-  //   image: res.photoUrl,
-  // }));
+};
+
+export const fetchCharacter = (name) => {
+  return fetch(`https://last-airbender-api.herokuapp.com/api/v1/characters?name=${name}`)
+    .then(res => res.json());
 };

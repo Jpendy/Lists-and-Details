@@ -6,8 +6,9 @@ const List = ({ listArray }) => {
 
   const listElement = listArray.map(item => {
     return (
-      <Link key={Math.random()} to={`/${item.name}`} >
-        <li key={Math.random()}>
+      <Link key={item._id} to={`/${item.name}`} >
+          
+        <li>
           <p>{item.name}</p>
           <img src={item.photoUrl} />
         </li>

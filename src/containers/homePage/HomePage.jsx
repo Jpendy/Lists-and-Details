@@ -9,7 +9,7 @@ const HomePage = () => {
 
   useEffect(() => {
     setLoading(true);
-    apiFetch()
+    apiFetch('https://last-airbender-api.herokuapp.com/api/v1/characters?perPage=50')
       .then((listArray) => setListArray(listArray))
       .finally(() => setLoading(false));
   }, []);
