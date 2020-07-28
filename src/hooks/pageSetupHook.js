@@ -13,11 +13,6 @@ export const usePageSetup = () => {
       .finally(() => setLoading(false));
   }, [page]);
 
-  // useEffect(() => {
-  //   apiFetch(page)
-  //     .then(listArray => setListArray(listArray));
-  // }, [page]);
-
   const handleClick = ({ target }) => {
     if(target.name === 'next') setPage(page => page + 1);
     if(target.name === 'previous') setPage(page => page - 1);
