@@ -13,7 +13,7 @@ export default function App() {
     <Router>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='/:name' component={DetailPage} />  
+        <Route exact path='/:name' component={DetailPage} />  
       </Switch>
     </Router>
   );
