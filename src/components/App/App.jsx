@@ -6,16 +6,20 @@ import {
 } from 'react-router-dom';
 import HomePage from '../../containers/homePage/HomePage';
 import DetailPage from '../../containers/detailPage/DetailPage';
+import NavBar from '../nav/NavBar';
 
 
 export default function App() {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/' component={HomePage} />
-        <Route exact path='/:name' component={DetailPage} />  
-      </Switch>
-    </Router>
+    <>
+      <NavBar />
+      <Router>
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/:name' component={DetailPage} />  
+        </Switch>
+      </Router>
+    </>
   );
 }
   

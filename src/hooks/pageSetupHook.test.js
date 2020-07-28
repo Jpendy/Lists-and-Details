@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react-hooks';
+import { renderHook, act, waitFor } from '@testing-library/react-hooks';
 import { usePageSetup } from '../hooks/pageSetupHook';
 
 jest.mock('../services/apiFetch.js', () => ({
@@ -11,9 +11,13 @@ jest.mock('../services/apiFetch.js', () => ({
 
 describe('usePageSetup hook', () => {
   it('it has listArray state', () => {
-    const { result } = renderHook(() => usePageSetup());
-    expect(result.current.listArray).not.toBeUndefined();
-  });
+    return act(() => {
+      const { result } = renderHook(() => usePageSetup());
+      return waitFor(() => {
+        expect(result.current.listArray).not.toBeUndefined();
+      });  
+    });
+  });  
 
 
 });

@@ -4,12 +4,17 @@ import './HomePage.css';
 import { usePageSetup } from '../../hooks/pageSetupHook';
 
 const HomePage = () => {
-  const { listArray, loading } = usePageSetup();
-
+  // const [page, setPage] = useState();
+  const { listArray, loading, page, handleClick } = usePageSetup();
+  
   if(loading) return <h1>Loading</h1>;
 
   return (
-    <List listArray ={listArray} />
+    <>
+      { page < 25 && <button name='next' onClick={handleClick}>Next</button> }
+      {page > 1 && <button name='previous' onClick={handleClick} >Previous</button>} 
+      <List listArray ={listArray} />
+    </>
   );
 };
 
