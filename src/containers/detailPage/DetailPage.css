@@ -1,3 +1,22 @@
 body {
     background: lightskyblue
 }
+
+.detailPageList {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+}
+
+.name {
+    font-size: 23px;
+}
+
+.detailImage {
+    width: 300px;
+    border-radius: 20px 80px 20px 80px;
+}
