@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
 import List from '../../components/list/List';
-import { fetchCharacter } from '../../services/apiFetch';
 import './DetailPage.css';
+import { useDetailPageSetup } from '../../hooks/detailPageSetupHook';
 
 const DetailPage = () => {
-
-  const [listArray, setListArray] = useState([]);
-  const { name } = useParams();
-  
-  useEffect(() => {
-    fetchCharacter(name)
-      .then((listArray) => setListArray(listArray));
-  }, []);
+  const { listArray } = useDetailPageSetup();
 
   return (
     <>
