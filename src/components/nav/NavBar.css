@@ -18,13 +18,13 @@ body {
 .homeLink {
     border: 1px solid black;
     padding: 10px;
-    background: orange;
+    background: yellow;
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 1px 2px 5px 1px;
     transition: .03s;
     
     &:hover {
-        background: lightgreen;
+        background: lime;
     }
 }
