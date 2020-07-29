@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageButtons component renders PageButtons 1`] = `
+<Fragment>
+  <button
+    name="next"
+    onClick={[Function]}
+  >
+    Next
+  </button>
+</Fragment>
+`;

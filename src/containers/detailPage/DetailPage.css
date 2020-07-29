@@ -1,0 +1,23 @@
+body {
+    background: lightskyblue
+}
+
+.detailPageList {
+    justify-content: space-between;
+}
+
+li {
+    margin: 100px;
+    text-align: center;
+    list-style: none;
+}
+
+.name {
+    font-size: 23px;
+}
+
+.detailImage {
+    width: 300px;
+    border-radius: 20px 80px 20px 80px;
+    box-shadow: 1px 2px 15px 2px;
+}

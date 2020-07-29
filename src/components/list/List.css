@@ -1,0 +1,15 @@
+.nameTag {
+    font-size: 20px;
+}
+
+.image {
+    width: 300px;
+    border-radius: 20px 80px 20px 80px;
+    box-shadow: 1px 2px 10px 2px;
+}
+
+.listItem {
+    margin: 50px auto;
+    text-align: center;
+    list-style: none;
+}
