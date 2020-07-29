@@ -1,5 +1,4 @@
 import React from 'react';
-import List from '../../components/list/List';
 import './DetailPage.css';
 import styles from './DetailPage.css';
 
